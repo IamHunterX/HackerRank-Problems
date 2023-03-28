@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+//Don't forget to call the function.
+int main(){
+  return 0;
+}
+
+vector<int> permutationEquation(vector<int> p) {
+    vector<int> newarr;
+    for (int i = 0; i < int(p.size()); i++) {
+        for (int j = 0; j < int(p.size()); j++) {
+            if (i + 1 == p.at(j)) {
+                for (int k = 0; k < int(p.size()); k++) {
+                    if (j + 1 == p.at(k)) {
+                        newarr.push_back(k + 1);
+                    }
+                }
+            }
+        }
+    }
+    return newarr;
+}
