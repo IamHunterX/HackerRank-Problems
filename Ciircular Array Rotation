@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+
+
+int main(){
+
+  return 0;
+}
+
+
+vector<int> circularArrayRotation(vector<int> a, int k, vector<int> queries) {
+    int temp,temp1;
+    vector<int> result;
+    for (int j = 0; j < k; j++) {
+        for (int i = 0; i < a.size(); i++) {
+            if (i == 0) {
+                temp = a[(i + 1) % a.size()];
+                a[(i + 1) % a.size()] = a[i];
+            }
+            else {
+                temp1 = temp;
+                temp = a[(i + 1) % a.size()];
+                a[(i + 1) % a.size()] = temp1;
+            }
+            
+        }
+        temp = 0;
+    }
+    for (int i = 0; i < queries.size(); i++) {
+        result.push_back(a.at(queries[i]));
+    }
+    return result;
+}
