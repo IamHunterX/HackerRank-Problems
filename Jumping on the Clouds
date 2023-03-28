@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+//Call the function jumpingOnClouds() in main
+int main(){
+  return 0;
+}
+
+int jumpingOnClouds(vector<int> c) {
+    int j=0,jumps=-1;
+    while (j < c.size()) {
+        if (j + 2 < c.size()) {
+            if (c.at(j + 2) == 0 || c.at(j + 1) == 1) {
+                j += 2;
+            }
+            else {
+                j++;
+            }
+            jumps++;
+        }
+        else {
+            j++;
+            jumps++;
+        }
+    }
+    return jumps;
+}
