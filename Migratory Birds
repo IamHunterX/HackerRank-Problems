@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+
+int main(){
+  
+  //Call the migratoryBirds() function here
+  
+  return 0;
+}
+
+int migratoryBirds(vector<int> arr) {
+    int maxterm=0,counter=0,temp=0;
+    for (int i= 0; i < arr.size(); i++)
+    {
+        cout << "Element " << i + 1 << " is " << arr.at(i) << endl;
+        for (int j = 0; j < arr.size(); j++) {
+            if (arr.at(i) == arr.at(j)) {
+                temp++;
+            }
+
+        }
+        if (temp > counter) {
+            counter = temp;
+            maxterm = arr.at(i);
+        }
+        temp = 0;
+    }
+    return maxterm;
+}
