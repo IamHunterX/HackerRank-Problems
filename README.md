@@ -6,3 +6,4 @@ Below are the listed problems solved by me while i practiced my coding skills on
   ->Counting Valleys
   ->Sequence Equation
   ->Circular Array Rotation
+  ->Migratory Birds
