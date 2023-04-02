@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+
+int main(){
+  //Call the fucntion here
+
+}
+
+float salesByMatch(vector v){
+  int counter,piars=0;
+  for (int i = 0; i < v.size(); i++) {
+		counter = 1;
+		for (int j = i + 1; j < v.size(); j++) {
+			if (v.at(i) == v.at(j) && v.at(i) != 0) {
+				counter = counter + 1;
+				nums.at(j) = 0;
+			}
+		}
+		pairs += (counter / 2);
+	}
+  return pairs;
+
+}
