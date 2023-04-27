@@ -1,0 +1,20 @@
+int chocolateFeast(int n, int c, int m) {
+    int chocolates = n/c;
+    int wraps = chocolates;
+    while(wraps > 1){
+        chocolates += wraps/m;
+        if(wraps%2 == 0){
+            wraps = wraps/m;
+        }
+        else{
+            wraps = wraps/m;
+            wraps++;            
+        }
+    }
+    return chocolates;
+}
+
+int main(){
+
+ return 0;
+}
