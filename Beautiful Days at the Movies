@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int startDay=13,EndDay=45,divisor=3,counter=0;
+    for(int i=startDay;i<=EndDay;i++){
+        int temp = i;
+        int inverse = 0;
+        while(temp!=0){
+            inverse = inverse * 10 + temp%10;
+            temp /= 10;
+        }
+        if(((abs(i-inverse))%divisor) == 0){
+            counter++;
+        }
+    }
+    cout<<counter<<endl;
+    return 0;
+}
+
+
